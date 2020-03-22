@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pitstop.Infrastructure.Messaging;
 
-namespace DockerAPI.Controllers
+namespace ContentManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     public class ContentController : Controller
