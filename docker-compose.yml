@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+    rabbitmq:
+        image: rabbitmq:3-management
+        container_name: rabbitmq_luvits
+        volumes: 
+            - rabbitmqdata2:/var/lib/rabbitmq
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        environment: 
+            - RABBITMQ_DEFAULT_USER=guest
+            - RABBITMQ_DEFAULT_PASS=guest
+    
+    contentmanagementapi:
+        image: sander9512/contentmanagementapi
+        build: contentmanagementapi
+        depends_on:
+            - rabbitmq
+        ports:
+            - "8080:80"
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Production
+
+volumes:
+    rabbitmqdata2:
+        external: true
