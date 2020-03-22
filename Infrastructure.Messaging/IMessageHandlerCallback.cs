@@ -8,5 +8,7 @@ namespace Pitstop.Infrastructure.Messaging
     public interface IMessageHandlerCallback
     {
         Task<bool> HandleMessageAsync(string messageType, string message);
+
+        bool HandleMessagePoC(string messageType, string message);
     }
 }
