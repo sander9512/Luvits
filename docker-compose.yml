@@ -52,6 +52,16 @@ services:
             - "8084:80"
         environment: 
             - ASPNETCORE_ENVIRONMENT=Production
+
+    documentmanagementapi:
+        image: sander9512/documentmanagementapi
+        build: documentmanagementapi
+        depends_on:
+            - rabbitmq
+        ports:
+            - "8085:80"
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Production
             
     customerrelationmanagementapi:
         image: sander9512/customerrelationmanagementapi
