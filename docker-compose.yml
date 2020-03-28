@@ -81,6 +81,14 @@ services:
         environment: 
             - ASPNETCORE_ENVIRONMENT=Production
 
+    customerrelationmanagementeventhandler:
+        image: sander9512/customerrelationmanagementeventhandler
+        build: customerrelationmanagementeventhandler
+        depends_on:
+            - rabbitmq
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Production
+
 volumes:
     rabbitmqdata2:
         external: true
