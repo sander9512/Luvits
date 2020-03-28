@@ -12,9 +12,11 @@ namespace Luvits.ContentManagementEventHandler
     public class EventHandler : IHostedService, IMessageHandlerCallback
     {
         IMessageHandler _messageHandler;
+        private List<String> PoCEvents;
 
         public EventHandler(IMessageHandler messageHandler) {
             _messageHandler = messageHandler;
+            PoCEvents = new List<String> { "NewMultimedia", "MultimediaEdited", "MultimediaDeleted"};
         }
         
         public void Start() {
@@ -36,9 +38,11 @@ namespace Luvits.ContentManagementEventHandler
         }
 
         public async Task<bool> HandleMessageAsync(string messageType, string message) {
+
+            if(PoCEvents.Contains(messageType)) {
             Log.Information("Event with messagetype " + messageType + " logged");
             Log.Information("Event with message " + message + " logged");
-
+            }
             return true;
         }
     }

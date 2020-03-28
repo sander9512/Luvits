@@ -12,9 +12,12 @@ namespace Luvits.CustomerRelationManagementEventHandler
     public class EventHandler : IHostedService, IMessageHandlerCallback
     {
         IMessageHandler _messageHandler;
+        private List<String> PoCEvents;
 
         public EventHandler(IMessageHandler messageHandler) {
             _messageHandler = messageHandler;
+            PoCEvents = new List<String> {"NewContact", "ContactEdited", "ContactDeleted", "NewCustomer", "CustomerEdited", "CustomerDeleted", 
+            "NewDocument", "DocumentEdited", "DocumentDeleted"};
         }
         
         public void Start() {
@@ -36,8 +39,10 @@ namespace Luvits.CustomerRelationManagementEventHandler
         }
 
         public async Task<bool> HandleMessageAsync(string messageType, string message) {
+            if(PoCEvents.Contains(messageType)) {
             Log.Information("Event with messagetype " + messageType + " logged");
             Log.Information("Event with message " + message + " logged");
+            }
 
             return true;
         }
