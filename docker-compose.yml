@@ -42,6 +42,16 @@ services:
             - "8083:80"
         environment: 
             - ASPNETCORE_ENVIRONMENT=Production
+
+    contactmanagementapi:
+        image: sander9512/contactmanagementapi
+        build: contactmanagementapi
+        depends_on:
+            - rabbitmq
+        ports:
+            - "8084:80"
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Production
             
     customerrelationmanagementapi:
         image: sander9512/customerrelationmanagementapi

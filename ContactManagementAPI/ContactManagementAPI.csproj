@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Luvits.ContactManagementAPI</AssemblyName>
+    <RootNameSpace>Luvits.ContactManagement</RootNameSpace>
+  </PropertyGroup>
+
+    <ItemGroup>
+    <PackageReference Include="Pitstop.Infrastructure.Messaging" Version="2.5.0" />
+  </ItemGroup>
+
+
+</Project>
