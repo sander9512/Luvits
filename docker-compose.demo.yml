@@ -1,0 +1,30 @@
+#Override for demo to show api's on localhost
+version: '3'
+services:
+
+    contentmanagementapi:
+        ports:
+            - "8080:80"
+
+    multimediamanagementapi:
+        ports:
+            - "8081:80"
+
+    customermanagementapi:
+        ports:
+            - "8083:80"
+
+    contactmanagementapi:
+        ports:
+            - "8084:80"
+
+    documentmanagementapi:
+        ports:
+            - "8085:80"
+
+    customerrelationmanagementapi:
+        ports:
+            - "8082:80"
+    
+
+    
