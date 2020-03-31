@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Pitstop.Infrastructure.Messaging</AssemblyName>
@@ -12,8 +11,8 @@
     <PackageProjectUrl>https://github.com/EdwinVW/pitstop/tree/master/src/Infrastructure.Messaging</PackageProjectUrl>
     <Authors>Edwin van Wijk</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <ProjectGuid>355A6F1B-D90A-42E2-AD72-B6441501D10A</ProjectGuid>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="RabbitMQ.Client" Version="5.1.2" />
@@ -21,5 +20,4 @@
     <PackageReference Include="Serilog" Version="2.9.0" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
-
 </Project>

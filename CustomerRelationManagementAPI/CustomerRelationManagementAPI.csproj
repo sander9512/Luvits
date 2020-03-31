@@ -1,13 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Luvits.CustomerRelationManagementAPI</AssemblyName>
     <RootNameSpace>Luvits.CustomerRelationManagement</RootNameSpace>
+    <ProjectGuid>2A40C6F8-C80E-4232-9C45-313B34726D3F</ProjectGuid>
   </PropertyGroup>
-
-    <ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Pitstop.Infrastructure.Messaging" Version="2.5.0" />
   </ItemGroup>
-
 </Project>

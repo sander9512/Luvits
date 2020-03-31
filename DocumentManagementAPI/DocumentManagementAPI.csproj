@@ -1,14 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Luvits.DocumentManagementAPI</AssemblyName>
     <RootNameSpace>Luvits.DocumentManagement</RootNameSpace>
+    <ProjectGuid>C04909A6-89B1-47EA-A661-19E5E3A8E820</ProjectGuid>
   </PropertyGroup>
-
-    <ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Pitstop.Infrastructure.Messaging" Version="2.5.0" />
   </ItemGroup>
-
-
 </Project>
